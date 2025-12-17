@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Sidebar, { Mode } from "./Sidebar";
 import ChatPanel from "./ChatPanel";
 import PromptPanel from "./PromptPanel";
-import VideoPanel from "./VideoPanel";
 
 export default function Shell() {
   const [mode, setMode] = React.useState<Mode>("prompt");
@@ -67,14 +66,13 @@ export default function Shell() {
     exit={{ opacity: 0, y: -8 }}
     className="panel"
   >
-    <VideoPanel goPrompt={() => setMode("prompt")} />
   </motion.div>
 )}
           </AnimatePresence>
         </div>
 
         <div className="helper">
-          Hazır. Webhook URL’i ayarla ve Lina’ya soru sor.
+          Hazır. Lina’ya soru sor.
         </div>
       </div>
     </div>

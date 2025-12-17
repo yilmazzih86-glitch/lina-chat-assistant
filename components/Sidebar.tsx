@@ -36,22 +36,9 @@ export default function Sidebar({
           <div className="navTitle">Prompt</div>
           <div className="navDesc">Veo / Banana / Sora prompt üret</div>
         </button>
-
-        <button
-          className={`navBtn ${mode === "video" ? "navBtnActive" : ""}`}
-          onClick={() => setMode("video")}
-        >
-          <div className="navTitle">Video (30s)</div>
-          <div className="navDesc">Bilgi senaryosu al</div>
-        </button>
       </div>
 
-      <div className="sideFooter">
-        <div>
-          <div className="fieldLabel">Webhook URL</div>
-          <WebhookInput />
-        </div>
-      </div>
+      
     </>
   );
 }

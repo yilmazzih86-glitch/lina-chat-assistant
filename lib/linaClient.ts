@@ -31,7 +31,6 @@ export async function callLina(payload: {
   meta?: Record<string, any>;
 }): Promise<LinaResponse> {
   const webhookUrl = getWebhookUrl();
-  if (!webhookUrl) throw new Error("Webhook URL yok. .env.local içine NEXT_PUBLIC_LINA_WEBHOOK_URL ekle.");
 
   const res = await fetch(webhookUrl, {
     method: "POST",
